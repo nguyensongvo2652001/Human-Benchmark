@@ -1,0 +1,112 @@
+/************************/
+/* DESIGN SYSTEM        */
+/* MAIN COLOR: #339af0  */
+/* COMPLEMENTARY MAIN COLOR: #F08933 */
+/************************/
+
+/************************/
+/* GLOBAL RESET        */
+/************************/
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/************************/
+/* HEADINGS    */
+/************************/
+.heading-primary {
+  font-size: 6.2rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.heading-tertiary {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+/************************/
+/* BUTTONS    */
+/************************/
+.btn,
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+  border-radius: 11px;
+
+  cursor: pointer;
+  outline: none;
+  transition: all 0.5s;
+}
+
+.btn--full,
+.btn--full:link,
+.btn--full:visited {
+  color: #fff;
+  position: relative;
+  background-color: #f08933;
+  z-index: 2;
+}
+
+.btn--full::after {
+  content: "";
+  display: inline-block;
+  border-radius: 11px;
+
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: scale(0);
+  transition: all 0.5s;
+
+  z-index: -1;
+}
+
+.btn--full:hover::after {
+  transform-origin: center;
+  transform: scale(1);
+  background-color: #fff;
+}
+
+.btn--full:hover {
+  color: #000;
+  transform: translateY(-1.6rem);
+  box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
+}
+
+.btn--full:active {
+  transform: translateY(-0.6rem);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/************************/
+/* ANIMATIONS   */
+/************************/
+@keyframes fade-in-and-out {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}

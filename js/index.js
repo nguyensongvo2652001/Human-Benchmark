@@ -1,12 +1,15 @@
-import reactionTimeController from "./controllers/reactionTimeController.js";
-import heroController from "./controllers/heroController.js";
-import mainController from "./controllers/mainController.js";
+import reactionTimeController from "./ReactionTime/reactionTimeController.js";
+import numberMemoryController from "./NumberMemory/numberMemoryController.js";
+import heroController from "./Hero/heroController.js";
+import mainController from "./Main/mainController.js";
+import optionsController from "./Options/optionsController.js";
 
 const init = function () {
   mainController.showDefault();
 
-  mainController.addControllers();
+  optionsController.addControllers();
   reactionTimeController.addControllers();
+  numberMemoryController.addControllers();
   heroController.addControllers();
 };
 

@@ -1,0 +1,112 @@
+/************************/
+/* NUMBER MEMORY SECTION */
+/************************/
+.number-memory__number-box {
+  margin: 0 auto;
+  word-break: break-all;
+  overflow-y: scroll;
+  scrollbar-color: #f08933 #339af0;
+  scrollbar-width: thin;
+  padding: 0.8rem 9.6rem;
+  position: relative;
+}
+
+.number-memory__number {
+  font-size: 6.2rem;
+  letter-spacing: 0.6rem;
+  line-height: 1.8;
+}
+
+.number-memory__load-bar {
+  width: 10rem;
+  height: 0.6rem;
+  background-color: #1864ab;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 9px;
+}
+
+.number-memory__loading-bar {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0.6rem;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  transition: all 0.01s;
+  border-radius: 9px;
+}
+
+.number-memory__form-question {
+  font-size: 5.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.number-memory__form-input {
+  display: block;
+  max-width: 140rem;
+  padding: 1rem;
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  background-color: #1864ab;
+  color: #fff;
+  margin-bottom: 2rem;
+  border: none;
+}
+
+.number-memory__form-input:focus {
+  outline: none;
+  border: 3px solid #135089;
+}
+
+.number-memory__label {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #e9ecef;
+  margin-bottom: 0.8rem;
+}
+
+.number-memory__correct-number-box,
+.number-memory__input-number-box {
+  font-size: 3.6rem;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.number-memory__correct-number-box {
+  margin-bottom: 1.6rem;
+}
+
+.number-memory__input-number-box {
+  margin-bottom: 2.4rem;
+}
+
+.number-memory__input-number-string {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.number-memory__input-number-string-icon {
+  font-size: 4.8rem;
+}
+
+.number-memory__input-number-string--incorrect {
+  color: #ff8787;
+}
+
+.number-memory__input-number-string--correct {
+  color: #69db7c;
+}
+
+.number-memory__level {
+  font-size: 4.8rem;
+  margin-bottom: 1.4rem;
+}
+
+.number-memory__high-score {
+  margin-bottom: 2.4rem;
+}

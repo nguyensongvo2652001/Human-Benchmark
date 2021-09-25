@@ -1,5 +1,5 @@
-import reactionTimeView from "../views/reactionTimeView.js  ";
-import reactionTimeModel from "../models/reactionTimeModel.js";
+import reactionTimeView from "./reactionTimeView.js";
+import reactionTimeModel from "./reactionTimeModel.js";
 import { wait } from "../utils/helper.js";
 
 class ReactionTimeController {

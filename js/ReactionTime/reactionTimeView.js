@@ -1,18 +1,9 @@
-import GameView from "./gameView.js";
+import GameView from "../GameView/gameView.js";
 
 class ReactionTimeView extends GameView {
   constructor() {
     super();
     this.parentElement = document.querySelector(".reaction-time");
-  }
-
-  clear() {
-    this.parentElement.innerHTML = "";
-  }
-
-  render(markup) {
-    this.clear();
-    this.parentElement.insertAdjacentHTML("afterbegin", markup);
   }
 
   renderWaitingScreen() {
@@ -58,8 +49,24 @@ class ReactionTimeView extends GameView {
   </div>`;
   }
 
+  generateDefaultMarkup() {
+    return `  <ion-icon name="flash" class="main__icon"></ion-icon>
+    <div class="main__text-box">
+      <div class="main__text">
+        <h1 class="heading-primary">Reaction Time Test</h1>
+        <p class="main__description">
+          When the box turns green, click as quickly as you can.
+        </p>
+      </div>
+      <a class="btn btn--full main__button reaction-time__play-button"
+        >Let's play !</a
+      >
+    </div>`;
+  }
+
   addStartGameController(controller) {
     this.parentElement.addEventListener("click", function (e) {
+      e.preventDefault();
       if (!e.target.classList.contains("reaction-time__play-button")) return;
       controller();
     });
@@ -67,6 +74,7 @@ class ReactionTimeView extends GameView {
 
   addActiveScreenClickController(controller) {
     this.parentElement.addEventListener("click", function (e) {
+      e.preventDefault();
       if (!e.target.classList.contains("reaction-time__screen--active")) return;
       controller();
     });

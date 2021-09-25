@@ -1,0 +1,48 @@
+.main {
+  background-color: #339af0;
+  color: #fff;
+  text-align: center;
+}
+
+.main__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+
+  transition: all 0.3s;
+  transform: translateY(2rem);
+  opacity: 0;
+}
+
+.main__section.main__section--active {
+  height: 62vh;
+  transform: translateY(0rem);
+  opacity: 1;
+}
+
+.main__icon {
+  font-size: 12rem;
+  margin-bottom: 3.6rem;
+  animation: fade-in-and-out 1.5s infinite;
+}
+
+.main__text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.main__text {
+  text-align: center;
+}
+
+.main__button {
+  align-self: center;
+}
+
+.main__description {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
